@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="800.0" styleClass="paneContent" xmlns:fx="http://javafx.com/fxml" fx:controller="visual.controller.ReportContentController">
+  <children>
+    <Label id="label1" fx:id="lblReport2" layoutX="467.0" layoutY="65.0" prefHeight="51.0" prefWidth="259.0" text="Listado con los datos de los hogares que el consumo real estuvo alterado" textAlignment="JUSTIFY" wrapText="true">
+      <font>
+        <Font name="Calibri" size="14.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label id="label1" fx:id="lblReport3" font="$x1" layoutX="44.0" layoutY="225.0" prefHeight="70.0" prefWidth="259.0" text="Listado con las diez casas que más consumo real tuvieron ordenado descendentemente por la cantidad de habitantes del hogar" textAlignment="JUSTIFY" wrapText="true" />
+    <Label id="label1" fx:id="lblReport1" font="$x1" layoutX="44.0" layoutY="65.0" prefHeight="70.0" prefWidth="259.0" text="Lecturas, de un hogar, en las que se haya consumido una cantidad igual o superior  un valor dado" textAlignment="JUSTIFY" wrapText="true" />
+    <Label id="label1" fx:id="lblReport4" font="$x1" layoutX="467.0" layoutY="234.0" prefHeight="70.0" prefWidth="259.0" text="Listado con los contadores y la cantidad de lecturas realizadas, agrupadas por hogar y ordenadas descendentemente según el importe cobrado" textAlignment="JUSTIFY" wrapText="true" />
+    <ComboBox id="comboBox1" fx:id="cbxHouses" layoutX="53.0" layoutY="138.0" prefHeight="21.0" prefWidth="236.0" promptText="Seleccion de hogar">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Button id="button1" fx:id="btnReport1" layoutX="208.0" layoutY="171.0" onAction="#report1" prefHeight="21.0" prefWidth="81.0" text="Generar" />
+    <Button id="button1" fx:id="btnReport2" layoutX="208.0" layoutY="323.0" onAction="#report3" prefHeight="21.0" prefWidth="81.0" text="Generar" />
+    <Button id="button2" fx:id="btnReport3" layoutX="645.0" layoutY="171.0" onAction="#report2" prefHeight="21.0" prefWidth="80.99990000000253" text="Generar" />
+    <Button id="button1" fx:id="btnReport4" layoutX="645.0" layoutY="323.0" onAction="#report4" prefHeight="21.0" prefWidth="81.0" text="Generar" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/style.css" />
+  </stylesheets>
+</AnchorPane>

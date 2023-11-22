@@ -1,0 +1,2 @@
+jfx.build.stagingdir = ${workspace}/Sistema gestor de libros en la red/build
+jfx.build.apptitle = Sistema gestor de libros en la red

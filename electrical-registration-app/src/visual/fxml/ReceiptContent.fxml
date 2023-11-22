@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import utils.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="800.0" styleClass="paneContent" xmlns:fx="http://javafx.com/fxml" fx:controller="visual.controller.ReceiptContentController">
+  <children>
+    <HBox id="hBox5" layoutY="18.0" prefHeight="16.0" prefWidth="750.0" styleClass="titleUnderline" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+      <children>
+        <Label id="label1" fx:id="title1" minHeight="18.0" prefHeight="18.0" prefWidth="237.0" text="Indicar fichero de recibos">
+          <font>
+            <Font name="Calibri" size="16.0" />
+          </font>
+        </Label>
+      </children>
+    </HBox>
+    <Button id="button1" fx:id="btnPath" layoutX="557.0" layoutY="49.0" onAction="#findReceiptFile" prefHeight="21.0" prefWidth="94.0" text="Insertar" />
+    <HBox id="hBox6" layoutY="103.0" prefHeight="16.0" prefWidth="750.0" styleClass="titleUnderline" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+      <children>
+        <Label id="label6" fx:id="title2" prefHeight="16.0" text="Recibos" translateY="1.5">
+          <font>
+            <Font name="Calibri" size="15.0" />
+          </font>
+        </Label>
+      </children>
+    </HBox>
+    <Label id="label2" fx:id="lblMonth" layoutX="50.0" layoutY="141.0" prefHeight="18.0" prefWidth="48.0" text="Mes">
+      <font>
+        <Font name="Calibri" size="14.0" fx:id="x1" />
+      </font>
+    </Label>
+    <TextField id="textField2" fx:id="txfMonth" editable="false" layoutX="105.0" layoutY="135.0" prefHeight="22.0" prefWidth="122.0" />
+    <Label id="label3" fx:id="lblYear" font="$x1" layoutX="254.0" layoutY="141.0" prefHeight="18.0" prefWidth="56.0" text="Año" />
+    <TextField id="textField3" fx:id="txfYear" editable="false" layoutX="320.0" layoutY="135.0" prefHeight="22.0" prefWidth="122.0" />
+    <CustomTableView id="tableView1" fx:id="tableReceipt" layoutY="183.0" prefHeight="200.0" prefWidth="486.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/style.css" />
+  </stylesheets>
+</AnchorPane>

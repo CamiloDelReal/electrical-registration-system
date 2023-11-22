@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="" fx:id="rootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#onMouseDragged" onMousePressed="#onPressedMouse" prefHeight="98.0" prefWidth="800.0" styleClass="TopbarMenuButton, doTransparent" xmlns:fx="http://javafx.com/fxml" fx:controller="visual.controller.TopBarWithMenuButtonController">
+  <children>
+    <VBox id="vBox1" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox id="hBox1" fx:id="headerLayout">
+          <children>
+            <Region fx:id="titleLeftSpacer" maxWidth="+Infinity" HBox.hgrow="ALWAYS" />
+            <Label id="label1" fx:id="title" text="Gestión de consumos eléctricos" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+              <font>
+                <Font size="14.0" />
+              </font>
+            </Label>
+            <Region fx:id="titleRightSpacer" maxWidth="+Infinity" HBox.hgrow="ALWAYS" />
+            <Button id="button1" fx:id="btnMin" maxWidth="-Infinity" minWidth="8.0" onAction="#minimizeWindow" prefHeight="12.0" prefWidth="12.0" styleClass="window-min" text="Button" />
+            <Button id="button1" fx:id="btnClose" maxWidth="-Infinity" minWidth="8.0" onAction="#closeWindow" prefHeight="12.0" prefWidth="12.0" styleClass="window-close" text="Button" />
+            <Region id="titleBothSpacer" fx:id="btnRightSpacer" maxWidth="10.0" prefWidth="10.0" />
+          </children>
+        </HBox>
+        <Region fx:id="titleBothSpacer" maxHeight="10.0" prefHeight="10.0" />
+        <HBox id="hBox2" fx:id="btnLayout" prefWidth="800.0">
+          <children>
+            <Region fx:id="spacerButtonsLeft" maxWidth="10.0" prefWidth="10.0" />
+            <Button id="toolbtn" fx:id="btnHomePane" alignment="BOTTOM_CENTER" contentDisplay="TOP" onAction="#goToHomePane" prefHeight="55.0" prefWidth="58.0" styleClass="toolbar_button_separate" text="Inicio" textAlignment="CENTER" wrapText="true">
+              <font>
+                <Font name="Calibri" size="10.0" fx:id="x1" />
+              </font>
+              <graphic>
+                <ImageView id="optionsImg">
+                  <image>
+                    <Image url="@../icons/star.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Region id="spacerButtonsRight" maxWidth="5.0" prefWidth="5.0" />
+            <Button id="toolbtn" fx:id="btnHouse" alignment="BOTTOM_CENTER" contentDisplay="TOP" font="$x1" onAction="#goToHousesPane" prefHeight="55.0" prefWidth="68.0" styleClass="toolbar_button_first" text="Hogares">
+              <graphic>
+                <ImageView fx:id="houseImg">
+                  <image>
+                    <Image url="@../icons/house.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Button id="toolbtn" fx:id="btnConsumption" alignment="BOTTOM_CENTER" contentDisplay="TOP" font="$x1" onAction="#goToConsumptionsPane" prefHeight="55.0" prefWidth="68.0" styleClass="toolbar_button" text="Consumos">
+              <graphic>
+                <ImageView fx:id="metroImg">
+                  <image>
+                    <Image url="@../icons/metro.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Button id="toolbtn" fx:id="btnAccountant" alignment="BOTTOM_CENTER" contentDisplay="TOP" font="$x1" onAction="#goToAccountantsPane" prefHeight="55.0" prefWidth="68.0" styleClass="toolbar_button" text="Contadores">
+              <graphic>
+                <ImageView fx:id="accountantImg">
+                  <image>
+                    <Image url="@../icons/someone.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Button id="toolbtn" fx:id="btnReciept" alignment="BOTTOM_CENTER" contentDisplay="TOP" font="$x1" onAction="#goToReceiptPane" prefHeight="55.0" prefWidth="68.0" styleClass="toolbar_button" text="Recibos">
+              <graphic>
+                <ImageView id="accountantImg">
+                  <image>
+                    <Image url="@../icons/recibo.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Button id="toolbtn" fx:id="btnReport" alignment="BOTTOM_CENTER" contentDisplay="TOP" font="$x1" onAction="#goToReportsPane" prefHeight="55.0" prefWidth="68.0" styleClass="toolbar_button_last" text="Reportes" textAlignment="CENTER">
+              <graphic>
+                <ImageView fx:id="reportImg">
+                  <image>
+                    <Image url="@../icons/graph.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Region fx:id="spacerBetweenButtons" maxWidth="+Infinity" HBox.hgrow="ALWAYS" />
+            <Button id="toolbtn" fx:id="btnOptions" alignment="BOTTOM_CENTER" contentDisplay="TOP" font="$x1" onAction="#goToOptionsPane" prefHeight="55.0" prefWidth="58.0" styleClass="toolbar_button_separate" text="Opciones" textAlignment="CENTER">
+              <graphic>
+                <ImageView fx:id="optionsImg">
+                  <image>
+                    <Image url="@../icons/opciones.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Region id="spacerButtonsRight" fx:id="spacerButtonsCenter" maxWidth="5.0" prefWidth="5.0" />
+            <Region fx:id="spacerButtonsRight" maxWidth="10.0" prefWidth="10.0" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@../css/style.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" >
+  <children>
+    <HBox id="hBox5" layoutY="18.0" prefHeight="16.0" prefWidth="750.0" styleClass="titleUnderline" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+      <children>
+        <Label id="label1" fx:id="title1" minHeight="18.0" prefHeight="16.0" prefWidth="80.0" text="Hogar">
+          <font>
+            <Font name="Calibri" size="16.0" />
+          </font>
+        </Label>
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>

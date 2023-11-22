@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#onMouseDragged" onMousePressed="#onPressedMouse" prefHeight="525.0" prefWidth="800.0" styleClass="mainScene" xmlns:fx="http://javafx.com/fxml" fx:controller="visual.controller.MainSceneController">
+  <children>
+    <Label id="label1" fx:id="title1" layoutX="46.0" layoutY="42.0" text="Gestión de consumos eléctricos" textFill="WHITE">
+      <font>
+        <Font name="Calibri Bold" size="35.0" />
+      </font>
+    </Label>
+    <Label id="label2" fx:id="title2" layoutX="439.0" layoutY="74.0" text="Versión 1.2" textFill="WHITE">
+      <font>
+        <Font name="Calibri" size="20.0" />
+      </font>
+    </Label>
+    <HBox id="hBox1" layoutX="764.0" layoutY="14.0" minHeight="11.0" minWidth="22.0" prefHeight="11.0" prefWidth="22.0">
+      <children>
+        <Button id="button4" onAction="#minimizeWindow" styleClass="window-min" />
+        <Button id="button2" onAction="#closeWindow" styleClass="window-close" />
+      </children>
+    </HBox>
+    <HBox id="hBox2" layoutY="292.0" prefHeight="120.0" prefWidth="630.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
+      <children>
+        <Button id="button1" fx:id="btnHouses" contentDisplay="TOP" onAction="#goToHousesPane" prefHeight="120.0" prefWidth="130.0" styleClass="toolbar_button_first" text="Hogares">
+          <graphic>
+            <ImageView fx:id="houseImg">
+              <image>
+                <Image url="@../icons/house_big.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button id="button1" fx:id="btnConsumption" contentDisplay="TOP" onAction="#goToConsumptionsPane" prefHeight="120.0" prefWidth="130.0" styleClass="toolbar_button" text="Consumos">
+          <graphic>
+            <ImageView fx:id="consumptionImg">
+              <image>
+                <Image url="@../icons/metro_big.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button id="button1" fx:id="btnAccountant" contentDisplay="TOP" onAction="#goToAccountantsPane" prefHeight="120.0" prefWidth="130.0" styleClass="toolbar_button" text="Contadores">
+          <graphic>
+            <ImageView fx:id="accountantImg">
+              <image>
+                <Image url="@../icons/someone_big.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button id="button3" fx:id="btnReceipt" contentDisplay="TOP" prefHeight="120.0" prefWidth="130.0" styleClass="toolbar_button" text="Recibos">
+          <graphic>
+            <ImageView fx:id="recibosImg">
+              <image>
+                <Image url="@../icons/recibo_big.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+        <Button id="button1" fx:id="btnReport" contentDisplay="TOP" onAction="#goToReportsPane" prefHeight="120.0" prefWidth="130.0" styleClass="toolbar_button_last" text="Reportes">
+          <graphic>
+            <ImageView fx:id="reportImg">
+              <image>
+                <Image url="@../icons/graph_big.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+      </children>
+    </HBox>
+    <Hyperlink id="hyperlink1" fx:id="hyperOption" layoutX="691.0" layoutY="10.0" onAction="#goToOptionsPane" prefHeight="20.0" prefWidth="60.0" text="Opciones" textFill="WHITE" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/style.css" />
+  </stylesheets>
+</AnchorPane>
